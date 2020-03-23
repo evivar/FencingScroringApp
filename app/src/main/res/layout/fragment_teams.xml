@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.teams.TeamsFragment">
+
+
+    <TextView
+        android:id="@+id/RedScoreTxtTeams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lcd"
+        android:text="00"
+        android:textColor="#FF1744"
+        android:textSize="130sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RedFullScoreTxtTeams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/lcd"
+        android:text="00"
+        android:textColor="#FF1744"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/LeftPriorityTxtTeams"
+        app:layout_constraintEnd_toStartOf="@+id/RedScoreTxtTeams"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toEndOf="@+id/RedScoreTxtTeams"
+        app:layout_constraintTop_toBottomOf="@+id/RedScoreTxtTeams" />
+
+    <TextView
+        android:id="@+id/GreenScoreTxtTeams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lcd"
+        android:text="00"
+        android:textColor="#76FF03"
+        android:textSize="130sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/GreenFullScoreTxtTeams"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/lcd"
+        android:text="00"
+        android:textColor="#76FF03"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/RightPriorityTxtTeams"
+        app:layout_constraintEnd_toStartOf="@+id/GreenScoreTxtTeams"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toEndOf="@+id/GreenScoreTxtTeams"
+        app:layout_constraintTop_toBottomOf="@+id/GreenScoreTxtTeams" />
+
+    <TextView
+        android:id="@+id/LeftPriorityTxtTeams"
+        android:layout_width="27dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lcd"
+        android:text="P"
+        android:textAlignment="textStart"
+        android:textColor="#72FFEA00"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RedFullScoreTxtTeams" />
+
+    <TextView
+        android:id="@+id/TimeCounterTxtTeams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/lcd"
+        android:text="1"
+        android:textColor="#FFEA00"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/ChronoTeams"
+        app:layout_constraintEnd_toStartOf="@+id/RightPriorityTxtTeams"
+        app:layout_constraintStart_toEndOf="@+id/LeftPriorityTxtTeams"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RightPriorityTxtTeams"
+        android:layout_width="27dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/lcd"
+        android:text="P"
+        android:textAlignment="textEnd"
+        android:textColor="#72FFEA00"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GreenFullScoreTxtTeams" />
+
+    <Chronometer
+        android:id="@+id/ChronoTeams"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lcd"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFEA00"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LeftPriorityTxtTeams"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <Button
+        android:id="@+id/ResetTimeBtnTeams"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="1dp"
+        android:drawableLeft="@drawable/ic_reset_time"
+        android:text="Set Time"
+        app:layout_constraintEnd_toStartOf="@+id/DrawPriorityBtnTeams"
+        app:layout_constraintStart_toEndOf="@+id/ResetAllBtnTeams"
+        app:layout_constraintTop_toBottomOf="@+id/ChronoTeams"
+        tools:layout_conversion_absoluteHeight="64dp"
+        tools:layout_conversion_absoluteWidth="137dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/DrawPriorityBtnTeams"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="1dp"
+        android:drawableLeft="@drawable/ic_priority"
+        android:text="Priority"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ResetTimeBtnTeams"
+        app:layout_constraintTop_toBottomOf="@+id/ChronoTeams"
+        tools:layout_conversion_absoluteHeight="64dp"
+        tools:layout_conversion_absoluteWidth="137dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/ResetAllBtnTeams"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="1dp"
+        android:drawableLeft="@drawable/ic_reset_all"
+        android:text="Reset All"
+        app:layout_constraintEnd_toStartOf="@+id/ResetTimeBtnTeams"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChronoTeams"
+        tools:layout_conversion_absoluteHeight="64dp"
+        tools:layout_conversion_absoluteWidth="137dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/StartStopBtnTeams"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="130dp"
+        android:fontFamily="@font/lcd"
+        android:text="Start"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ResetAllBtnTeams"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_conversion_absoluteHeight="145dp"
+        tools:layout_conversion_absoluteWidth="411dp">
+
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StartStopBtnTeams">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginBottom="2.5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/LYellowCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp" />
+
+            <Button
+                android:id="@+id/LRedCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp" />
+
+            <Button
+                android:id="@+id/LBlackCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/black_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp" />
+
+            <Space
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/RYellowCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp" />
+
+            <Button
+                android:id="@+id/RRedCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp" />
+
+            <Button
+                android:id="@+id/RBlackCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/black_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="2.5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/LYellowPCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/p_card" />
+
+            <Button
+                android:id="@+id/LRedPCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/p_card" />
+
+            <Button
+                android:id="@+id/LBlackPCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/black_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/p_card" />
+
+            <Space
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/RYellowPCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/p_card" />
+
+            <Button
+                android:id="@+id/RRedPCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/p_card" />
+
+            <Button
+                android:id="@+id/RBlackPCardBtnTeams"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/black_card"
+                android:paddingLeft="2.5dp"
+                android:paddingRight="2.5dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/p_card" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

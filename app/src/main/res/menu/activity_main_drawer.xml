@@ -5,16 +5,41 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_poule"
+            android:icon="@drawable/ic_poule"
+            android:title="@string/menu_poule" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_de_10"
+            android:icon="@drawable/ic_de"
+            android:title="@string/menu_de_10" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_de_15"
+            android:icon="@drawable/ic_de"
+            android:title="@string/menu_de_15" />
+        <item
+            android:id="@+id/nav_teams"
+            android:icon="@drawable/ic_teams"
+            android:title="@string/menu_teams" />
     </group>
+
+    <item android:title="Penalties">
+        <menu>
+            <item
+                android:id="@+id/nav_sanctions"
+                android:title="@string/menu_sanctions" />
+        </menu>
+    </item>
+
+    <item android:title="Donate &amp; Contact">
+        <menu>
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_phone_black_24dp"
+                android:title="@string/menu_contact" />
+            <item
+                android:id="@+id/nav_donate"
+                android:icon="@drawable/ic_monetization_on_black_24dp"
+                android:title="@string/menu_donate" />
+        </menu>
+    </item>
 </menu>

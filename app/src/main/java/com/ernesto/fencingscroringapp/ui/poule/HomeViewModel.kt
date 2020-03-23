@@ -1,4 +1,4 @@
-package com.ernesto.fencingscroringapp.ui.home
+package com.ernesto.fencingscroringapp.ui.poule
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -3,23 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_poule">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.ernesto.fencingscroringapp.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home"/>
+        android:id="@+id/nav_poule"
+        android:name="com.ernesto.fencingscroringapp.ui.poule.PouleFragment"
+        android:label="@string/menu_poule"
+        tools:layout="@layout/fragment_poule">
+        <action
+            android:id="@+id/action_nav_home_to_nav_slideshow2"
+            app:destination="@id/nav_de_15"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_right"
+            app:popEnterAnim="@anim/enter_from_right"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@id/nav_poule" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_gallery2"
+            app:destination="@id/nav_de_10"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_right"
+            app:popEnterAnim="@anim/enter_from_right"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@id/nav_poule" />
+        <action
+            android:id="@+id/action_nav_poule_to_nav_teams"
+            app:destination="@id/nav_teams"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_right"
+            app:popEnterAnim="@anim/enter_from_right"
+            app:popExitAnim="@anim/exit_to_right"
+            app:popUpTo="@id/nav_poule" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.ernesto.fencingscroringapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_de_10"
+        android:name="com.ernesto.fencingscroringapp.ui.de10t.DE10TFragment"
+        android:label="@string/menu_de_10"
+        tools:layout="@layout/fragment_direct_elimination_10_t" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.ernesto.fencingscroringapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_de_15"
+        android:name="com.ernesto.fencingscroringapp.ui.de15t.DE15TFragment"
+        android:label="@string/menu_de_15"
+        tools:layout="@layout/fragment_direct_elimination_15_t" />
+
+    <fragment
+        android:id="@+id/nav_teams"
+        android:name="com.ernesto.fencingscroringapp.ui.teams.TeamsFragment"
+        android:label="@string/menu_teams"
+        tools:layout="@layout/fragment_teams" />
 </navigation>
