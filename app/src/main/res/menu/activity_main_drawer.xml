@@ -26,6 +26,7 @@
         <menu>
             <item
                 android:id="@+id/nav_sanctions"
+                android:icon="@drawable/ic_tarjetitas"
                 android:title="@string/menu_sanctions" />
         </menu>
     </item>
